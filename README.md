@@ -1,6 +1,6 @@
 # newsspec-13170: SyriaVote
 
-Syria strikes: Find out how your MP voted
+Library closure lookup
 
 ## Getting started
 

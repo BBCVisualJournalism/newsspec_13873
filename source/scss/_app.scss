@@ -1,0 +1,15 @@
+/* separate your sass into different files to keep it maintainable!  */
+.main img {
+    width: 100%;
+}
+
+.clear { clear: both; }
+
+html { font-size: 62.5%; }
+body {
+    color: $mine_shaft;
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 22px;
+    font-family: Helmet, Freesans, Helvetica, Arial, sans-serif;
+}

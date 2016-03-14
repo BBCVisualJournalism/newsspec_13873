@@ -1,0 +1,12 @@
+{
+  "debug":          "false",
+  "whichEnv":       "stage",
+  "scaffoldLite":   "false",
+  "project_number": "13873",
+  "year":           "2016",
+  "imageWidths":    ["320", "640", "1024"],
+  "services": {
+    "default": "english",
+    "others":  "*"
+  }
+}

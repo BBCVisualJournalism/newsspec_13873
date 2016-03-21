@@ -69,12 +69,12 @@ define(['bootstrap', 'autocompleteMediator', 'http://www.bbc.co.uk/indepthtoolki
     };
 
     var getHmlString = function (userData) {
-        var html = '<p>No data on changes in libraries was available for this council.</p>';
-        if (userData.data.la_code !== '00QW') {
-            html = getTotalClosures(userData.key, userData.data.total_closures);
-            html += getTotalPaidStaff(userData.data.paid_staff_2010, userData.data.paid_staff_now);
-            html += getVolunteerCount(userData.data.volunteers_2010, userData.data.volunteers_now);
-        }
+        var html = '';
+        
+        html += getTotalClosures(userData.key, userData.data.total_closures);
+        html += getTotalPaidStaff(userData.data.paid_staff_2010, userData.data.paid_staff_now);
+        html += getVolunteerCount(userData.data.volunteers_2010, userData.data.volunteers_now);
+        
         return html;
     };
 

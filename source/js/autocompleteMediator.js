@@ -1,12 +1,12 @@
 define(['bootstrap', 'lib/vendors/autocomplete'], function (news) {
-    var AutocompleteMediator = function ($inputElement, onMpSelect, mpData) {
+    var AutocompleteMediator = function ($inputElement, onMpSelect, dataset) {
         this.$autocompleteInput = $inputElement;
         this.onMpSelect = onMpSelect;
         this.autocompleteSelectedMp = null;
         this.istatsSent = false;
         this.$searchForm = news.$('.mpSearch_form');
 
-        this.mpData = mpData;
+        this.dataset = dataset;
         
         this.setupAutocomplete();
         
@@ -19,6 +19,7 @@ define(['bootstrap', 'lib/vendors/autocomplete'], function (news) {
             this.$autocompleteInput.autocomplete({
                 lookup: this.getAutocompleteData(),
                 lookupLimit: 20,
+                // minChars: 3,
                 autoSelectFirst: true,
                 onSelect: function (suggestion) {
                     if (suggestion.mp !== self.autocompleteSelectedMp) {
@@ -37,14 +38,14 @@ define(['bootstrap', 'lib/vendors/autocomplete'], function (news) {
             });
         },
         getAutocompleteData: function () {
-            // console.log('this.mpData = ', this.mpData);
+            // console.log('this.dataset = ', this.dataset);
             var autocompleteObject = [];
-            for (var mpKey in this.mpData) {
+            for (var mpKey in this.dataset) {
                 autocompleteObject.push({
                     value: mpKey,
                     mp: {
                         key: mpKey,
-                        data: this.mpData[mpKey]
+                        data: this.dataset[mpKey]
                     }
                 });
             }

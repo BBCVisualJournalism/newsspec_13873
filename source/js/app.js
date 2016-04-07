@@ -47,7 +47,7 @@ define(['bootstrap', 'autocompleteMediator', 'http://www.bbc.co.uk/indepthtoolki
 
     var getTotalClosures = function (laName, closures) {
         var html = '<p>';
-        html += dataMissing(closures) ? 'No data for closures.': 'In ' + laName + ' since 2010 ' + getBBCNumber(closures) + ' ' + pluralizeText(closures, 'library', 'libraries') + ' and/or mobile ' + pluralizeText(closures, 'library', 'libraries') + ' ' + pluralizeText(closures, 'has', 'have') + ' closed.';
+        html += dataMissing(closures) ? 'No data for closures.': 'In ' + laName + ' since 2010 ' + getBBCNumber(closures) + ' library service ' + pluralizeText(closures, 'point', 'points') + ' ' + pluralizeText(closures, 'has', 'have') + ' closed.';
         html += '</p>';
         return html;
     };
@@ -70,11 +70,11 @@ define(['bootstrap', 'autocompleteMediator', 'http://www.bbc.co.uk/indepthtoolki
 
     var getHmlString = function (userData) {
         var html = '';
-        
+
         html += getTotalClosures(userData.key, userData.data.total_closures);
         html += getTotalPaidStaff(userData.data.paid_staff_2010, userData.data.paid_staff_now);
         html += getVolunteerCount(userData.data.volunteers_2010, userData.data.volunteers_now);
-        
+
         return html;
     };
 

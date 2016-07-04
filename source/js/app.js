@@ -1,4 +1,4 @@
-define(['bootstrap', 'autocompleteMediator', 'http://www.bbc.co.uk/indepthtoolkit/data-sets/library_closure?callback=define'], function (news, AutocompleteMediator, autocompleteData) {
+define(['bootstrap', 'autocompleteMediator', 'http://www.stage.bbc.co.uk/indepthtoolkit/data-sets/library_closures/jsonp'], function (news, AutocompleteMediator, autocompleteData) {
 
     var $searchForm = news.$('.mpSearch_form');
     var $searchInput = news.$('#mpSearch_form_input');

@@ -1,4 +1,5 @@
-define(['bootstrap', 'autocompleteMediator', 'http://www.bbc.co.uk/indepthtoolkit/data-sets/library_closure/jsonp'], function (news, AutocompleteMediator, autocompleteData) {
+define(['bootstrap', 'autocompleteMediator', 'text!http://www.bbc.co.uk/indepthtoolkit/data-sets/library_closure/json-with-props'], function (news, AutocompleteMediator, autocompleteDataJson) {
+    var autocompleteData = JSON.parse(autocompleteDataJson);
 
     var $searchForm = news.$('.mpSearch_form');
     var $searchInput = news.$('#mpSearch_form_input');

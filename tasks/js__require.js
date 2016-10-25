@@ -10,7 +10,8 @@ module.exports = function (grunt) {
         'bootstrap': './lib/news_special/bootstrap',
         'istats-1': './lib/vendors/istats/istats',
         'template_engine': './lib/news_special/template_engine',
-        'ShareTools': './../../bower_components/sharetools/sharetools'
+        'ShareTools': './../../bower_components/sharetools/sharetools',
+        'text': '../../bower_components/text/text'
     };
 
     // *************************************************************************
